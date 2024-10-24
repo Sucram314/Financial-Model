@@ -1,0 +1,14 @@
+import yfinance as yf
+
+from matplotlib import pyplot as plt
+import seaborn as sns
+
+import pandas as pd
+import numpy as np
+
+from datetime import datetime
+from datetime import timedelta
+
+#Thirty Year T-Bond
+thirtyYear = yf.Ticker("^TYX")
+thirtyData = pd.DataFrame(thirtyYear.history(period="10y"))
